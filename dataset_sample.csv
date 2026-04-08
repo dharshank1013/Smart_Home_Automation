@@ -1,0 +1,21 @@
+command,intent,device,action,extra
+"turn on the lights",home_control,lights,on,
+"switch off the fan",home_control,fan,off,
+"turn on the AC",home_control,ac,on,
+"close the windows",home_control,windows,close,
+"lock the front door",home_control,door,lock,
+"play Shape of You on YouTube",media,,,"Shape of You Ed Sheeran"
+"play lo-fi music",media,,,"lo-fi music"
+"set alarm at 7 AM",alarm,,,7:00 AM
+"wake me up at 6:30",alarm,,,6:30 AM
+"remind me to take medicine at 8 PM",reminder,,,"take medicine"
+"remind me about the meeting at 3",reminder,,,"meeting"
+"take a note buy groceries",note,,,"buy groceries"
+"write down call the doctor tomorrow",note,,,"call the doctor tomorrow"
+"search for weather in Chennai",search,,,"weather in Chennai"
+"what is photosynthesis",search,,,"photosynthesis"
+"tell me a joke",general,,,
+"what can you do",general,,,
+"hello",general,,,
+"turn off the TV",home_control,tv,off,
+"open the windows",home_control,windows,open,

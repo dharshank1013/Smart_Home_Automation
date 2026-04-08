@@ -1,0 +1,30 @@
+# ── Core AI / ML 
+torch>=2.1.0
+transformers>=4.40.0
+accelerate>=0.27.0
+sentencepiece>=0.1.99
+
+# ── Audio 
+sounddevice>=0.4.6
+soundfile>=0.12.1
+numpy>=1.24.0
+librosa>=0.10.0
+
+# ── TTS fallback 
+pyttsx3>=2.90
+
+# ── Scheduler 
+APScheduler>=3.10.4
+
+# ── Web / API (no API keys needed — uses Wikipedia + DuckDuckGo free APIs) ───
+requests>=2.31.0
+
+# ── YouTube browser automation 
+selenium>=4.18.0
+webdriver-manager>=4.0.1
+
+# ── UI 
+streamlit>=1.35.0
+
+# ── Utilities 
+python-dotenv>=1.0.0

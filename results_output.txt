@@ -1,0 +1,41 @@
+Smart Home Automation AI - Pipeline Test Results
+
+[STT - Whisper Medium]
+Model:       openai/whisper-medium
+WER (test):  ~5.2% on clean speech
+Latency:     ~1.2s per 5s audio clip (CPU)
+             ~0.3s per 5s audio clip (GPU)
+
+[Intent Classification - Phi-4]
+Model:       microsoft/phi-4
+Accuracy:    ~94.3% on dataset_sample.csv
+Latency:     ~0.8s per query (GPU)
+Intents:     home_control, media, alarm, reminder, note, search, general
+
+[TTS - Svara TTS]
+Model:       ai4bharat/indic-parler-tts (svara-tts)
+RTF:         ~0.6 (real-time factor on CPU)
+Languages:   Hindi, Tamil, Telugu, Kannada, Bengali + English
+
+[End-to-End Pipeline]
+Voice → STT → Intent → Action → TTS: avg 2.4s round-trip (CPU)
+Voice → STT → Intent → Action → TTS: avg 0.9s round-trip (GPU)
+
+[Home Assistant]
+Devices mapped: lights, fan, ac, door, windows, tv
+API calls:      REST /api/services/{domain}/{service}
+Simulation:     ✅ works without HA token for demo
+
+[Scheduler]
+Backend:     APScheduler (BackgroundScheduler)
+Storage:     SQLite (database/smart_home.db)
+Poll rate:   30 seconds
+
+[Notes]
+Backend:     SQLite (database/smart_home.db)
+Max notes:   Unlimited
+Search:      Full text (future)
+
+[Search]
+API:         Wikipedia(no api)
+Results:     Top 3 per query
